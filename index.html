@@ -110,6 +110,36 @@
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The evaluatr program uses the liwcr package (soon to be submitted to CRAN) to provide a web-based implementation of LIWC</li>
+<li>The liwcr program takes two arguments: the text to be analyzed, and the dictionary for the analysis. Example:</li>
+</ul>
+
+<pre><code class="r">source(&quot;liwcr.R&quot;)
+</code></pre>
+
+<pre><code class="r">liwcr(&quot;I love writing code all the time, day and night. Especially night.&quot;, &quot;eng.dic&quot;)[3:7,]
+</code></pre>
+
+<pre><code>##   V1    V2 count percent
+## 3  3 ppron     1   8.333
+## 4  4     i     1   8.333
+## 5  5    we     0   0.000
+## 6  6   you     0   0.000
+## 7  7 shehe     0   0.000
+</code></pre>
+
+<p>(Note: the bracketed &quot;3:7&quot; limits the number of rows displayed for this presentation.)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -130,6 +160,12 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=3 title='evaluatr: applying the LIWC framework and dictionary'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example'>
+         4
       </a>
     </li>
   </ul>
