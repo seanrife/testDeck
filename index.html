@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>evaluatr</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
-  <meta name="author" content="">
+  <meta name="description" content="evaluatr">
+  <meta name="author" content="Sean C. Rife, Ph.D.">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>evaluatr</h1>
+    <h2>a text evaluation program</h2>
+    <p>Sean C. Rife, Ph.D.<br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,28 +43,68 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>the problem</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <ul>
+<li>Unstructured text data is everywhere
+
+<ul>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Blogs</li>
+<li>Message boards</li>
+</ul></li>
+<li>Analyzing these data using traditional quantitative methods (correlation, regression, etc.) is impossible without some intermediary transformation</li>
+<li>Existing solutions (e.g., sentiment analysis, word counts) provide only limited insights into the meaning of a body of text</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>solution: the LIWC framework</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
-</code></pre>
+    <ul>
+<li>LIWC (pronounced &quot;Luke&quot;) is a framework for extracting the psychological meaning of words
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<ul>
+<li>Developed by Pennebaker (2000) through a factor analysis of large existing bodies of text</li>
+<li>More information available from <a href="http://www.liwc.net">http://www.liwc.net</a> and <a href="http://bit.ly/NirLSc">http://bit.ly/NirLSc</a></li>
+</ul></li>
+<li>LIWC uses a dictionary to rate a body of text in 63 categories. Examples:
+
+<ul>
+<li>Insight</li>
+<li>Work</li>
+<li>Money</li>
+<li>Death</li>
+<li>Social processes</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>evaluatr: applying the LIWC framework and dictionary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>evaluatr applies the LIWC framework and English dictionary to provide an analysis of entered text</li>
+<li>Source code available from:
+
+<ul>
+<li><a href="http://www.github.com/seanrife/evaluatr">http://www.github.com/seanrife/evaluatr</a> (full Shiny app)</li>
+<li><a href="http://www.github.com/seanrife/liwcr">http://www.github.com/seanrife/liwcr</a> (LIWC implementation in R)</li>
+</ul></li>
+<li>LIWC dictionaries are proprietary and must be purchased (along with standalone software for Windows or Macintosh) from <a href="http://www.liwc.net">http://www.liwc.net</a></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +116,20 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='the problem'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='solution: the LIWC framework'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='evaluatr: applying the LIWC framework and dictionary'>
+         3
       </a>
     </li>
   </ul>
