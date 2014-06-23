@@ -1,30 +1,43 @@
 ---
-title       : Test deck
-subtitle    : 
-author      : 
+title       : evaluatr
+subtitle    : a text evaluation program
+author      : Sean C. Rife, Ph.D.
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
 ---
+## the problem
 
-## Read-And-Delete
+* Unstructured text data is everywhere
+  * Facebook
+  * Twitter
+  * Blogs
+  * Message boards
+* Analyzing these data using traditional quantitative methods (correlation, regression, etc.) is impossible without some intermediary transformation
+* Existing solutions (e.g., sentiment analysis, word counts) provide only limited insights into the meaning of a body of text
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+---
+## solution: the LIWC framework
 
---- .class #id 
+* LIWC (pronounced "Luke") is a framework for extracting the psychological meaning of words
+ * Developed by Pennebaker (2000) through a factor analysis of large existing bodies of text
+  * More information available from http://www.liwc.net and http://bit.ly/NirLSc
+* LIWC uses a dictionary to rate a body of text in 63 categories. Examples:
+  * Insight
+  * Work
+  * Money
+  * Death
+  * Social processes
 
-## Slide 2
+---
+## evaluatr: applying the LIWC framework and dictionary
 
-
-```r
-plot(1:10, 1:10)
-```
-
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
-
-
+* evaluatr applies the LIWC framework and English dictionary to provide an analysis of entered text
+* Source code available from:
+  * http://www.github.com/seanrife/evaluatr (full Shiny app)
+  * http://www.github.com/seanrife/liwcr (LIWC implementation in R)
+* LIWC dictionaries are proprietary and must be purchased (along with standalone software for Windows or Macintosh) from http://www.liwc.net
